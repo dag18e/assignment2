@@ -58,5 +58,6 @@ double Helicopter::mileageEstimate(double t)
 
 string Helicopter::toString() 
 {
-    return "-> Helicopter\n" + PoweredVehicle::toString() + "\n\tNumber of engines: " + to_string(getNumEngines());
+    return "-> Helicopter\n" + PoweredVehicle::toString() + "\n\tNumber of engines: " + to_string(getNumEngines()) + 
+           "\n\tNumber of blades: " + to_string(getNumBlades()) + "\n\tNumber of rotors: " + to_string(getNumRotors());
 }
