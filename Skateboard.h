@@ -13,6 +13,7 @@ private:
     int myGearCount;
 
 public:
+    Skateboard();
     explicit Skateboard(string brand, string model);
 
     virtual ~Skateboard();
