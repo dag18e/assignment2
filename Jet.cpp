@@ -1,5 +1,5 @@
 //
-// Created by Esteban Parra on 9/5/19.
+// Created by Dylan Giesler on 10/3/2019.
 //
 
 #include "Jet.h"
@@ -8,8 +8,8 @@
 Jet::Jet() 
 {
     numberOfEngines = 1;
-    setBrand("Custom");
-    setModel("VTx");
+    setBrand("Lockheed");
+    setModel("F35");
 }
 
 Jet::Jet(string brand, string model, string fuelType, int engineAmount = 1)
@@ -29,7 +29,15 @@ int Jet::getNumEngines()
 
 double Jet::mileageEstimate(double t) 
 {
+    //seed for RNG
+    std::srand((unsigned int)time(0));
 
+    double mileage = rand() % 41 + 60 * t;
+    if (fuelType == "Rocket" && numberOfEngines > 2) 
+    {
+        mileage += mileage * (0.055 * numberOfEngines);
+    }
+    return mileage;
 }
 
 string Jet::toString() 
