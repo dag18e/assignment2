@@ -2,8 +2,8 @@
 // Created by Dylan Giesler on 10/3/2019.
 //
 
-#ifndef DRIVINGSIMULATOR_CAR_H
-#define DRIVINGSIMULATOR_CAR_H
+#ifndef DRIVINGSIMULATOR_JET_H
+#define DRIVINGSIMULATOR_JET_H
 
 #include "PoweredVehicle.h"
 
