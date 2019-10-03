@@ -11,7 +11,7 @@ class Helicopter : public PoweredVehicle {
 public:
     Helicopter();
 
-    explicit Helicopter(string brand, string model, string fuelType, int engineAmount = 1);
+    explicit Helicopter(string brand, string model, string fuelType, int engineAmount = 1, int bladeAmount = 3, int rotorAmount = 1);
 
     virtual ~Helicopter();
     int getNumEngines();
