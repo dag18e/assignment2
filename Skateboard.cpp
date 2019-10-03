@@ -28,7 +28,7 @@ double Skateboard::mileageEstimate(double t)
     double mileage = ((rand() % 5 + 1) / 10) * t;
     if (t > 25 && t < 250) 
     {
-        mileage += mileage * (rand() % 5 + 1);
+        mileage += mileage * (rand() % static_cast<int>(t/3) + 1);
     }
     return mileage;
 }
