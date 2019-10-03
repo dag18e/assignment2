@@ -48,10 +48,14 @@ double Helicopter::mileageEstimate(double t)
 
     double mileage = rand() % 21 + 30 * t;
 
-    //special case for special fuel and special 
+    //special case for special fuel and special number of blades
     if (fuelType == "GoGoJuice" && numberOfBlades < 6) 
     {
         mileage += mileage * (0.55 * numberOfEngines);
+    }
+    else if(fuelType == "NoGoJuice")
+    {
+        mileage *= .76;
     }
     return mileage;
 }
