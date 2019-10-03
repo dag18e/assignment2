@@ -1,0 +1,50 @@
+a. 
+C:\Users\lizja\Desktop\assignment2>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 377 bytes | 377.00 KiB/s, done.
+Total 4 (delta 1), reused 1 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/dag18e/assignment2.git
+   11c0965..61764eb  master -> master
+
+b.
+10
+git log
+
+c.
+Wed Sep 25 18:13:30 2019 -0400
+git log --follow .gitignore
+
+d. 
+1. So development code doesn't break existing code. 
+2. So multiple people can work on the same base project, but add different features to it.
+
+e.
+git status tell you if you are working on the most up to date version of your branch, as well as if you have anything to commit.
+git log tells you all the commits that have happened in your branch, as well as the authors, times, and messages.
+
+f.
+git log Vehicle.h
+
+g.
+git log --grep="file"
+
+h.
+Inheritance is the idea that classes can derive from other classes in a parent-child relationship such that all member data and functions in the
+    parent class is accessible by the child class, but not the other way around.
+Polymorphism is the ability for child classes to override functions defined in the parent class specifically for use by the child.
+Encapsulation is when you put all of the member data and the functions that utilize or manipulate that data into the same class, thereby encapsulating it.
+
+i.
+In the integration manager workflow, all the pushes to the main must go through the single integration manager, whereas dicatator and lieutenants
+make pushes go through two checks before being pushed to main. This makes it seem like a dicatator and lieutenants style workflow would be a lot easier
+to scale in a large company.
+
+j.
+Centralized workflow would force each developer to handle conflicts on their own. This would certainly slow them down in developing since a lot more
+of their time would need to be spent merging instead. Dictator and lieutenants makes a lot more sense for large teams since there could be a set 
+of lieutenants for say every 5 or 10 developers, then the dictator could just handle the 10-20 merges after that. This keeps the developers developing,
+with greatly fewer resources being used on dealing with merges.
