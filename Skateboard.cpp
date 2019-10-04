@@ -25,7 +25,7 @@ double Skateboard::mileageEstimate(double t)
     //seed for RNG
     std::srand((unsigned int)time(0));
 
-    double mileage = ((rand() % 5 + 1) / 10) * t;
+    double mileage = ((rand() % 5 + 1) / 10.0) * t;
     if (t > 25 && t < 250) 
     {
         mileage += mileage * (rand() % static_cast<int>(t/3) + 1);
