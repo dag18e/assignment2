@@ -12,7 +12,7 @@ Jet::Jet()
     setModel("F35");
 }
 
-Jet::Jet(string brand, string model, string fuelType, int engineAmount = 1)
+Jet::Jet(string brand, string model, string fuelType, int engineAmount)
  {
     setBrand(brand);
     setModel(model);

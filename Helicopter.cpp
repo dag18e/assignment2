@@ -5,7 +5,7 @@
 #include "Helicopter.h"
 #include <ctime>
 
-Helicopter::Helicopter() 
+Helicopter::Helicopter()
 {
     numberOfEngines = 1;
     numberOfBlades = 4;
@@ -14,7 +14,7 @@ Helicopter::Helicopter()
     setModel("Apache");
 }
 
-Helicopter::Helicopter(string brand, string model, string fuelType, int engineAmount = 1, int bladeAmount = 3, int rotorAmount = 1)
+Helicopter::Helicopter(string brand, string model, string fuelType, int engineAmount, int bladeAmount, int rotorAmount)
  {
     setBrand(brand);
     setModel(model);
@@ -26,7 +26,7 @@ Helicopter::Helicopter(string brand, string model, string fuelType, int engineAm
 
 Helicopter::~Helicopter() = default;
 
-int Helicopter::getNumEngines() 
+int Helicopter::getNumEngines()
 {
     return numberOfEngines;
 }
@@ -41,7 +41,7 @@ int Helicopter::getNumRotors()
     return numberOfRotors;
 }
 
-double Helicopter::mileageEstimate(double t) 
+double Helicopter::mileageEstimate(double t)
 {
     //seed for RNG
     std::srand((unsigned int)time(0));
@@ -49,7 +49,7 @@ double Helicopter::mileageEstimate(double t)
     double mileage = rand() % 21 + 30 * t;
 
     //special case for special fuel and special number of blades
-    if (fuelType == "GoGoJuice" && numberOfBlades < 6) 
+    if (fuelType == "GoGoJuice" && numberOfBlades < 6)
     {
         mileage += mileage * (0.55 * numberOfEngines);
     }
@@ -60,8 +60,8 @@ double Helicopter::mileageEstimate(double t)
     return mileage;
 }
 
-string Helicopter::toString() 
+string Helicopter::toString()
 {
-    return "-> Helicopter\n" + PoweredVehicle::toString() + "\n\tNumber of engines: " + to_string(getNumEngines()) + 
+    return "-> Helicopter\n" + PoweredVehicle::toString() + "\n\tNumber of engines: " + to_string(getNumEngines()) +
            "\n\tNumber of blades: " + to_string(getNumBlades()) + "\n\tNumber of rotors: " + to_string(getNumRotors());
 }
