@@ -48,3 +48,9 @@ Centralized workflow would force each developer to handle conflicts on their own
 of their time would need to be spent merging instead. Dictator and lieutenants makes a lot more sense for large teams since there could be a set 
 of lieutenants for say every 5 or 10 developers, then the dictator could just handle the 10-20 merges after that. This keeps the developers developing,
 with greatly fewer resources being used on dealing with merges.
+
+
+Final question (#5):
+The prototype is definitely using polymorphism because the derived classes, such as Jet and Helicopter, override the functions of their parent classes
+like toString and mileage estimate. The prototype is also using encapsulation, since each class contains private member data, some of which can be
+accessed by an accessor function, if such a function was written. Otherwise, outside classes or methods do not have access to one another's private data.
